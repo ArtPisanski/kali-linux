@@ -1,0 +1,10 @@
+"REM" is commenting
+
+//How to metasploit a PC on the network
+1. run "ipconfig" on target PC
+2. look for IPv4 address        //eg. 192.168.0.38
+3. `nmap 192.168.0.38`          //pings an address
+4. `nmap 192.168.0.38 -Pn -sV   //Ping & Detailed View
+5. `sudo msfconsole`            //initializes MetaSploit Framework Console
+6. `search smb`                 //searches smb exploits
+7. 
