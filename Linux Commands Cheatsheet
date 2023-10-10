@@ -5,7 +5,7 @@ unalias	  //Remove alias definitions
 pwd	      //Prints the working directory
 cd	      //Changes directory
 cp	      //Copies files and directories
-rm	      //Remove files and directories
+rm	      //Remove files and directories    -d //remove empty dir
 mv	      //Moves (renames) files and directories
 mkdir	    //Creates directories
 man	      //Displays manual page of other commands
